@@ -21,9 +21,36 @@ router.route('/add').post((req, res) => {
     });
 
     newItem.save()
-    .then(() => res.json('Item added'))
+    .then(() => res.json(`Item ${name} added!`))
     .catch(err => res.status(400).json('Error: ' + err));
 
+});
+
+router.route('/:id').get((req, res) => {
+    Item.findById(req.params.id)
+    .then(item => res.json(item))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/:id').delete((req, res) => {
+    Item.findByIdAndDelete(req.params.id)
+    .then((item) => res.json(`Item ${item.name} deleted.`))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/update/:id').post((req, res) => {
+    Item.findById(req.params.id)
+    .then(item => {
+        item.name = req.body.name;
+        item.description = req.body.description;
+        item.price = Number(req.body.price);
+        item.quantity = Number(req.body.quantity);
+
+        item.save()
+        .then(() => res.json(`Item ${item.name} updated!`))
+        .catch(err => res.status(400).json('Error: ' + err));
+    })
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
 module.exports = router;

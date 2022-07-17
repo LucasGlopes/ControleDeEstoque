@@ -20,6 +20,10 @@ connection.once('open', () => {
 
 app.use('/items', itemsRouter);
 
+app.get('/', function(req, res) {
+    res.send('Olá Mundo!');
+});
+
 app.listen(port, () => {
-    console.log(`Rodando na port ${port}`);
+    console.log(`Rodando na porta ${port}`);
 })
