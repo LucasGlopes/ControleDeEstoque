@@ -1,0 +1,23 @@
+.navBarContainer {
+    background-color: rgb(240, 103, 40);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 6.25rem;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2rem;
+
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 25%;
+
+}
