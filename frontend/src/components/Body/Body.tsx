@@ -11,7 +11,7 @@ const Body: React.FC = () => {
         <Grid
             container
             direction="column"
-            justifyContent="center"
+            justifyContent="space-around"
             alignItems="center"
             sx={{
                 width: '100vw',

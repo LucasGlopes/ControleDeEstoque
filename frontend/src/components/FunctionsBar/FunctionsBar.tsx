@@ -13,7 +13,6 @@ const FunctionsBar: React.FC = () => {
             alignItems="center"
             sx={{
                 width: '50%',
-                // backgroundColor: 'bluse',
             }}
         >
             <Link to='/estoque' style={{ textDecoration: 'none' }}>

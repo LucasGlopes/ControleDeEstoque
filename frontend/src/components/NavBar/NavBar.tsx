@@ -14,7 +14,8 @@ const NavBar: React.FC = () => {
             sx={{
                 backgroundColor: "rgb(240, 103, 40)",
                 color: "white",
-                height: '10%'
+                height: '10%',
+                // marginBottom: '1rem'
             }}
         >
                 <div className="logo">
