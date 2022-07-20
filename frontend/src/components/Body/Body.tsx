@@ -14,7 +14,6 @@ const Body: React.FC = () => {
     const getItems = async () => {
         try{
             const { data } = await api.get("/items");
-            console.log(data);
             setItems(data);
         }
         catch{
@@ -34,7 +33,7 @@ const Body: React.FC = () => {
             }}
         >
             <FunctionsBar getItems={getItems}/>            
-            <Stock items={items}/>
+            <Stock items={items} getItems={getItems}/>
 
         </Grid>
     )

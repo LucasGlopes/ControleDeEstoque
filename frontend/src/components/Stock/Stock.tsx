@@ -5,7 +5,7 @@ import StockItem from '../StockItem/StockItem';
 import './style.css';
 
 interface StockItemProps {
-    id: string;
+    _id: string;
     name: string;
     price: number;
     quantity: number
@@ -13,6 +13,7 @@ interface StockItemProps {
 
 interface StockProps {
     items: Array<StockItemProps>;
+    getItems: () => void;
 }
 
 const Stock: React.FC<StockProps> = (props) => {
@@ -24,7 +25,7 @@ const Stock: React.FC<StockProps> = (props) => {
             justifyContent="flex-start"
             align-items="center"
             sx={{
-                width: '70%',
+                width: '75%',
                 height: '70%',
                 border: '5px solid #1A1918',
                 borderRadius: '10px',
@@ -39,10 +40,11 @@ const Stock: React.FC<StockProps> = (props) => {
             <div className='stockBody'>
                 {props.items.slice(0).reverse().map((item: StockItemProps) => (
                     <StockItem 
-                        id={item.id}
+                        _id={item._id}
                         name={item.name}
                         price={item.price}
                         quantity={item.quantity}
+                        getItems={props.getItems}
                     />
                 ))}
 

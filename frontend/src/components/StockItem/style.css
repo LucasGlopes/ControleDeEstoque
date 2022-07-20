@@ -9,11 +9,17 @@
     /* background-color: blue; */
     transition: filter 0.3s;
     background-color: rgb(248, 252, 252);
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    font-family: 'Roboto Slab', serif;
+
 }
 
 .container:hover{
     /* background-color: rgb(233, 230, 230); */
-    filter: brightness(80%);
+    filter: brightness(95%);
 }
 
 .container h1{
@@ -25,4 +31,11 @@
 
 .container h2 {
     width: 14%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
