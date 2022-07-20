@@ -1,5 +1,6 @@
 import { Button, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import api from '../../services/api';
 import './style.css'
 
@@ -30,7 +31,12 @@ const ItemModal: React.FC<ItemModalProps> = (props) => {
 
         }
         catch {
-            console.log('deu ruim')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo Deu Errado! Tente Novamente!',
+                showCloseButton: true,
+            });
         }
     }
 

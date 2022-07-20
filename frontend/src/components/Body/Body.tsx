@@ -3,6 +3,8 @@ import { Grid } from '@mui/material'
 import FunctionsBar from "../FunctionsBar/FunctionsBar";
 import Stock from "../Stock/Stock";
 import api from "../../services/api";
+import Swal from "sweetalert2";
+
 
 const Body: React.FC = () => {
     const [items, setItems] = useState([]);
@@ -17,7 +19,12 @@ const Body: React.FC = () => {
             setItems(data);
         }
         catch{
-            console.log('deu ruim')
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Algo Deu Errado!',
+                showCloseButton: true,
+            });
         }
     }
 
