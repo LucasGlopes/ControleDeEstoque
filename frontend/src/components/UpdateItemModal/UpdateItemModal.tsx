@@ -26,20 +26,31 @@ const UpdateItemModal: React.FC<UpdateItemModalProps> = (props) => {
             price: itemPrice
         }
 
-        try{
-            await api.post(`/items/update/${props._id}`, item);
-            await props.getItems();
-            props.setIsUpdateItemOpen(false);
-
-        }
-        catch {
+        if (itemQuantity < 0 || itemPrice < 0){
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Algo Deu Errado! Tente Novamente!',
+                text: 'Quantidade e Preço devem ser maiores ou iguais a zero!',
                 showCloseButton: true,
             });
+        } else{
+
+            try{
+                await api.post(`/items/update/${props._id}`, item);
+                await props.getItems();
+                props.setIsUpdateItemOpen(false);
+    
+            }
+            catch {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo Deu Errado! Tente Novamente!',
+                    showCloseButton: true,
+                });
+            }
         }
+
     }
 
     const closeModal = () => {

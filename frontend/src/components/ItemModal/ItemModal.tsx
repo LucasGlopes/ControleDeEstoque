@@ -22,22 +22,33 @@ const ItemModal: React.FC<ItemModalProps> = (props) => {
             price: itemPrice
         }
 
-        console.log(item)
-
-        try{
-            await api.post("/items/add", item);
-            await props.getItems();
-            props.setIsAddItemOpen(false);
-
-        }
-        catch {
+        if (itemQuantity < 0 || itemPrice < 0){
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Algo Deu Errado! Tente Novamente!',
+                text: 'Quantidade e Preço devem ser maiores ou iguais a zero!',
                 showCloseButton: true,
             });
+        }else{
+
+            console.log(item)
+    
+            try{
+                await api.post("/items/add", item);
+                await props.getItems();
+                props.setIsAddItemOpen(false);
+    
+            }
+            catch {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo Deu Errado! Tente Novamente!',
+                    showCloseButton: true,
+                });
+            }
         }
+
     }
 
     const closeModal = () => {
@@ -66,7 +77,6 @@ const ItemModal: React.FC<ItemModalProps> = (props) => {
                     label="Nome"
                     defaultValue=""
                     onChange={(e) => setItemName(e.target.value)}
-
                 />
                 <TextField
                     required
@@ -74,7 +84,21 @@ const ItemModal: React.FC<ItemModalProps> = (props) => {
                     label="Quantidade"
                     type="number"
                     onChange={(e) => setItemQuantity(parseInt(e.target.value))}
-
+                    // onChange={(e) => {
+                    //     if (e.target.value === "") {
+                    //         setItemQuantity(parseInt(e.target.value));
+                    //         return;
+                    //     }
+                    //     const value = parseInt(e.target.value);
+                    //     if (value > 10) {
+                    //         setItemQuantity(10);
+                    //     } else if (value < 2) {
+                    //         setItemQuantity(2);
+                    //     } else {
+                    //         setItemQuantity(value);
+                    //     }
+                    // }
+                    // }
                 />
                 <TextField
                     required
