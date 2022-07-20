@@ -4,7 +4,6 @@ import './style.css'
 interface StockItemProps {
     id: string;
     name: string;
-    // description: string;
     price: number;
     quantity: number
 }

@@ -3,7 +3,8 @@ import Button from '@mui/material/Button';
 import styled from '@emotion/styled';
 
 interface FunctionButtonProps {
-    title: string;
+  title: string;
+  setIsModalOpen: (itemModalState: boolean) => void;
 }
 
 const StyledButton = styled(Button)`
@@ -14,14 +15,17 @@ const StyledButton = styled(Button)`
 `;
 
 const FunctionButton: React.FC<FunctionButtonProps> = (props) => {
-    const { title } = props;
+    const { title, setIsModalOpen } = props;
 
     return (
         <StyledButton
-                variant="contained"
-                size="large"
-            >
-                {title}
+          variant="contained"
+          size="large"
+          onClick={() => {
+            setIsModalOpen(true)
+          }}
+        >
+          {title}
         </StyledButton>
     )
 }

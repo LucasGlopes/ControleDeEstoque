@@ -11,24 +11,11 @@ interface StockItemProps {
     quantity: number
 }
 
-const Stock: React.FC = () => {
-    const [items, setItems] = useState([]);
+interface StockProps {
+    items: Array<StockItemProps>;
+}
 
-    useEffect(() => {
-        getItems();
-      }, []);
-    
-    const getItems = async () => {
-        try{
-            const { data } = await api.get("/items");
-            console.log(data);
-            setItems(data);
-        }
-        catch{
-            console.log('deu ruim')
-        }
-    }
-
+const Stock: React.FC<StockProps> = (props) => {
 
     return (
         <Grid
@@ -50,7 +37,7 @@ const Stock: React.FC = () => {
                 <h2>Opções</h2>
             </div>
             <div className='stockBody'>
-                {items.map((item: StockItemProps) => (
+                {props.items.slice(0).reverse().map((item: StockItemProps) => (
                     <StockItem 
                         id={item.id}
                         name={item.name}

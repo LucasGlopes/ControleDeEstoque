@@ -17,8 +17,12 @@
 }
 
 .container h1{
-    width: 50%;
+    width: 60%;
     background-color: 'red';
 
     /* color: white */
+}
+
+.container h2 {
+    width: 14%;
 }
