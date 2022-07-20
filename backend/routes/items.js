@@ -9,13 +9,11 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
     const name = req.body.name;
-    const description = req.body.description;
     const price = Number(req.body.price);
     const quantity = Number(req.body.quantity);
 
     const newItem = new Item({
         name,
-        description,
         price,
         quantity,
     });
@@ -42,7 +40,6 @@ router.route('/update/:id').post((req, res) => {
     Item.findById(req.params.id)
     .then(item => {
         item.name = req.body.name;
-        item.description = req.body.description;
         item.price = Number(req.body.price);
         item.quantity = Number(req.body.quantity);
 

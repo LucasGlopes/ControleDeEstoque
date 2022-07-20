@@ -10,11 +10,6 @@ const itemSchema = new Schema({
         trim: true,
         minlength: 3
     },
-    description: {
-        type: String,
-        required: false,
-        trim: true
-    },
     price: {
         type: Number,
         required: true

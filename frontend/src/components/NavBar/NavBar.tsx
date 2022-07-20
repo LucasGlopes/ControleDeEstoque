@@ -15,16 +15,13 @@ const NavBar: React.FC = () => {
                 backgroundColor: "rgb(240, 103, 40)",
                 color: "white",
                 height: '10%',
-                // marginBottom: '1rem'
             }}
         >
                 <div className="logo">
-                    <Link to='/' style={{ textDecoration: 'none', color: 'white' }}>
 
-                        <h1>
-                            Controle de Estoque
-                        </h1>
-                    </Link>
+                    <h1>
+                        Controle de Estoque
+                    </h1>
                     <img 
                         src={caixa} 
                         alt="Alien inside spaceship"

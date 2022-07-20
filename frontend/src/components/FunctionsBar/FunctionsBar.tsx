@@ -15,14 +15,9 @@ const FunctionsBar: React.FC = () => {
                 width: '50%',
             }}
         >
-            <Link to='/estoque' style={{ textDecoration: 'none' }}>
-                <FunctionButton title={"Ver Estoque"} />
-            </Link>  
+            <FunctionButton title={"Ver Estoque"} />
             <FunctionButton title={"Novo Item"} />
             <FunctionButton title={"Nova Venda"} />
-            <Link to='/historicoDeVendas' style={{ textDecoration: 'none' }}>
-                <FunctionButton title={"Histórico de Vendas"} />
-            </Link>
 
         </Grid>
     )

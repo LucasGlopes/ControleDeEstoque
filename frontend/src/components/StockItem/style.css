@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    border-bottom: 1px solid rgb(126, 126, 126);
+
+    /* background-color: blue; */
+    transition: filter 0.3s;
+    background-color: rgb(248, 252, 252);
+}
+
+.container:hover{
+    /* background-color: rgb(233, 230, 230); */
+    filter: brightness(80%);
+}
+
+.container h1{
+    width: 50%;
+    background-color: 'red';
+
+    /* color: white */
+}
