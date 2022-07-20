@@ -8,8 +8,7 @@
 
     height: 6.25rem;
 
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.2rem;
+    
 
 }
 
@@ -19,5 +18,8 @@
     align-items: center;
 
     width: 25%;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1rem;
 
 }
