@@ -23,7 +23,6 @@ const FunctionsBar: React.FC<FunctionsBarProps> = (props) => {
         >
             <FunctionButton title={"Novo Item"} setIsModalOpen={setIsAddItemOpen}/>
             <FunctionButton title={"Nova Venda"} setIsModalOpen={setIsAddItemOpen}/>
-            {/* <ItemModal /> */}
 
             {isAddItemOpen && <ItemModal setIsAddItemOpen={setIsAddItemOpen} getItems={props.getItems}/>}
         </Grid>

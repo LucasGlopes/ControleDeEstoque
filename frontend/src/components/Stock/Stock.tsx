@@ -27,7 +27,7 @@ const Stock: React.FC<StockProps> = (props) => {
             sx={{
                 width: '75%',
                 height: '70%',
-                border: '5px solid #1A1918',
+                border: '5px solid rgb(240, 103, 40)',
                 borderRadius: '10px',
             }}
         >
