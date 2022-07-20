@@ -2,6 +2,7 @@ import React from "react";
 import './style.css'
 import caixa from '../../imgs/caixa.png';
 import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const NavBar: React.FC = () => {
     return (
@@ -17,9 +18,12 @@ const NavBar: React.FC = () => {
             }}
         >
                 <div className="logo">
-                    <h1>
-                        Controle de Estoque
-                    </h1>
+                    <Link to='/' style={{ textDecoration: 'none', color: 'white' }}>
+
+                        <h1>
+                            Controle de Estoque
+                        </h1>
+                    </Link>
                     <img 
                         src={caixa} 
                         alt="Alien inside spaceship"

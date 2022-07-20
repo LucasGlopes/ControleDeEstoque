@@ -1,6 +1,10 @@
 import React from "react";
 import { Grid } from '@mui/material'
 import FunctionsBar from "../FunctionsBar/FunctionsBar";
+import { Route, Routes } from "react-router-dom";
+import Stock from "../Stock/Stock";
+import SalesHistory from "../SalesHistory/SalesHistory";
+import Home from "../Home/Home";
 
 const Body: React.FC = () => {
     return (
@@ -15,6 +19,13 @@ const Body: React.FC = () => {
             }}
         >
             <FunctionsBar />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/estoque' element={<Stock/>} />
+                <Route path='/historicoDeVendas' element={<SalesHistory/>} />
+            </Routes>
+
+
         </Grid>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import FunctionButton from "../FunctionButton/FunctionButton";
+import { Link } from "react-router-dom";
 
 const FunctionsBar: React.FC = () => {
 
@@ -15,10 +16,14 @@ const FunctionsBar: React.FC = () => {
                 // backgroundColor: 'bluse',
             }}
         >
-            <FunctionButton title={"Ver Estoque"} />
+            <Link to='/estoque' style={{ textDecoration: 'none' }}>
+                <FunctionButton title={"Ver Estoque"} />
+            </Link>  
             <FunctionButton title={"Novo Item"} />
             <FunctionButton title={"Nova Venda"} />
-            <FunctionButton title={"Histórico de Vendas"} />
+            <Link to='/historicoDeVendas' style={{ textDecoration: 'none' }}>
+                <FunctionButton title={"Histórico de Vendas"} />
+            </Link>
 
         </Grid>
     )
