@@ -6,7 +6,6 @@
 
     border-bottom: 1px solid rgb(240, 103, 40)    ;
 
-    /* background-color: blue; */
     transition: filter 0.3s;
     background-color: rgb(248, 252, 252);
     color: rgb(71, 28, 8); 
@@ -20,7 +19,6 @@
 }
 
 .container:hover{
-    /* background-color: rgb(233, 230, 230); */
     filter: brightness(95%);
 }
 
@@ -28,7 +26,6 @@
     width: 60%;
     background-color: 'red';
 
-    /* color: white */
 }
 
 .container h2 {

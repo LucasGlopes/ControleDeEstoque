@@ -1,6 +1,5 @@
 import Grid from '@mui/material/Grid';
-import React, { useEffect, useState } from 'react';
-import api from '../../services/api';
+import React from 'react';
 import StockItem from '../StockItem/StockItem';
 import './style.css';
 

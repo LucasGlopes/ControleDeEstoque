@@ -2,7 +2,6 @@ import React from "react";
 import './style.css'
 import caixa from '../../imgs/caixa.png';
 import { Grid } from "@mui/material";
-import { Link } from "react-router-dom";
 
 const NavBar: React.FC = () => {
     return (

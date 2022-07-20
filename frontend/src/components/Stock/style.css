@@ -6,7 +6,6 @@
 
     border-bottom: 1px solid rgb(126, 126, 126);
 
-    /* background-color: blue; */
     background-color: rgb(240, 103, 40);
     color:white;
 
@@ -15,8 +14,6 @@
 
 .stockHeader h1{
     width: 50%;
-    
-    /* color: white */
 }
 
 .stockBody{

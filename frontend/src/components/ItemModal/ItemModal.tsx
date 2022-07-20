@@ -84,21 +84,7 @@ const ItemModal: React.FC<ItemModalProps> = (props) => {
                     label="Quantidade"
                     type="number"
                     onChange={(e) => setItemQuantity(parseInt(e.target.value))}
-                    // onChange={(e) => {
-                    //     if (e.target.value === "") {
-                    //         setItemQuantity(parseInt(e.target.value));
-                    //         return;
-                    //     }
-                    //     const value = parseInt(e.target.value);
-                    //     if (value > 10) {
-                    //         setItemQuantity(10);
-                    //     } else if (value < 2) {
-                    //         setItemQuantity(2);
-                    //     } else {
-                    //         setItemQuantity(value);
-                    //     }
-                    // }
-                    // }
+
                 />
                 <TextField
                     required

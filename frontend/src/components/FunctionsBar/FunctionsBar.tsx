@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Grid } from '@mui/material'
 import FunctionButton from "../FunctionButton/FunctionButton";
-import { Link } from "react-router-dom";
 import ItemModal from "../ItemModal/ItemModal";
 
 interface FunctionsBarProps {
